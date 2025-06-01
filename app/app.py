@@ -12,17 +12,24 @@ import pandas as pd
 import joblib
 import gradio as gr
 
-# Load the model
-MODEL_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "model", "loan_master_model.pkl")
+from huggingface_hub import hf_hub_download
 
-# Load the model
+# Load the model from Hugging Face Hub
+MODEL_REPO_ID = "Chakri5658/chakri-loanmate-model"
+MODEL_FILENAME = "loan_master_model.pkl"
+USE_MASTER_MODEL = False # Default to False
+loan_master = None # Initialize loan_master
+
 try:
-    loan_master = joblib.load(MODEL_PATH)
-    print("Loan Master Model loaded successfully")
+    print(f"Downloading model from repo: {MODEL_REPO_ID}, file: {MODEL_FILENAME}")
+    model_path = hf_hub_download(repo_id=MODEL_REPO_ID, filename=MODEL_FILENAME)
+    print(f"Model downloaded to: {model_path}")
+    loan_master = joblib.load(model_path)
+    print("Loan Master Model loaded successfully using joblib.")
     USE_MASTER_MODEL = True
 except Exception as e:
-    print(f"Warning: Could not load Loan Master Model: {str(e)}")
-    USE_MASTER_MODEL = False
+    print(f"Error loading Loan Master Model: {str(e)}")
+    # sys.exit(f"Critical error: Model could not be loaded. {str(e)}") # Optional: exit if critical
 
 def predict_loan_approval(loan_master, new_data, dataset_type='hugging'):
     """
