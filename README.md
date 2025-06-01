@@ -1,6 +1,6 @@
 ---
 title: LoanMate
-emoji:💸
+emoji: 💸
 colorFrom: indigo
 colorTo: blue
 sdk: gradio
