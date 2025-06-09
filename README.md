@@ -2,28 +2,6 @@
 
 [![Hugging Face Spaces](https://img.shields.io/badge/Live%20Demo-HuggingFace-blue?logo=huggingface&logoColor=yellow)](https://huggingface.co/spaces/Chakri5658/loanmate)
 
-<div align="center">
-  <img src="
-
-![image/png](https://cdn-uploads.huggingface.co/production/uploads/67d84bd79d35da9f13ec9489/rf0zYp_TkRKW_oXaCn38v.png)
-</div>
-
-<p align="center">
-  <a href="https://huggingface.co/spaces/Chakri5658/loanmate">
-    <img alt="Hugging Face Space" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue">
-  </a>
-  <a href="https://huggingface.co/Chakri5658/chakri-loanmate-model">
-    <img alt="Hugging Face Model" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-yellow">
-  </a>
-  <a href="#">
-    <img alt="Paper" src="https://img.shields.io/badge/Paper-Link-green">
-  </a>
-  <a href="#">
-    <img alt="License" src="https://img.shields.io/badge/License-MIT-lightgrey">
-  </a>
-</p>
-
----
 
 # LoanMate Model Details
 
